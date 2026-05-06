@@ -1,0 +1,9 @@
+order_id,product,quantity,price,date,status
+1,Laptop,2,45000,2024-01-15,completed
+2,Mouse,5,500,2024-01-16,completed
+3,Keyboard,3,1200,2024-01-17,pending
+4,Monitor,1,12000,2024-01-18,completed
+5,Headphones,4,2500,2024-01-19,cancelled
+6,Webcam,2,3000,2024-01-20,completed
+7,USB Hub,6,800,2024-01-21,pending
+8,Laptop,1,45000,2024-01-22,completed
