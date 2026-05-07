@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login — CSVCleaner Pro</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+        h2 { font-size: 22px; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
+        .sub { color: #94a3b8; font-size: 13px; margin-bottom: 25px; font-weight: 400; }
+        label { font-size: 13px; font-weight: 600; color: #374151; display: block; margin-bottom: 6px; }
+        input {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            outline: none;
+            transition: border 0.2s;
+        }
+        input:focus { border-color: #6366f1; }
+        .btn {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+        .btn:hover { opacity: 0.9; }
+        .error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+        .bottom { text-align: center; margin-top: 20px; font-size: 13px; color: #94a3b8; }
+        .bottom a { color: #6366f1; text-decoration: none; font-weight: 600; }
+        .back { display: block; text-align: center; margin-top: 15px; font-size: 13px; color: #94a3b8; text-decoration: none; }
+        .back:hover { color: #6366f1; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">⚡ CSVCleaner Pro</div>
+        <h2>Welcome back</h2>
+        <p class="sub">Login to your account</p>
+
+        {% if error %}
+        <div class="error">⚠️ {{ error }}</div>
+        {% endif %}
+
+        <form method="POST">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="you@example.com" required>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <button type="submit" class="btn">Login →</button>
+        </form>
+
+        <div class="bottom">
+            Don't have an account? <a href="/signup">Sign up free</a>
+        </div>
+        <a href="/" class="back">← Back to Home</a>
+    </div>
+</body>
+</html>
