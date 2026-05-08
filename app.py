@@ -113,4 +113,4 @@ def download():
     return send_file(path, as_attachment=True, download_name='cleaned_data.csv')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
